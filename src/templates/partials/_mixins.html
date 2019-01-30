@@ -1,0 +1,142 @@
+{% macro zeroCheck(num=0) %}
+    {{ '0'+num if num < 9 else num }}
+{% endmacro %}
+
+{% macro checkDefault(num=0, rand=1) %}
+    {{ num if num else range(1, rand) | random }}
+{% endmacro %}
+
+{% macro randTime(hour='', minute='') %}
+    {{zeroCheck(checkDefault(hour,24))}}:{{zeroCheck(checkDefault(minute,59))}}
+{% endmacro %}
+
+{% macro randDate(day='', month='', year='2018') %}
+    {{zeroCheck(checkDefault(day,28))}}/{{zeroCheck(checkDefault(month, 12))}}/{{zeroCheck(checkDefault(year, 2019))}}
+{% endmacro %}
+
+
+{% macro menubar(title, class='menu') %}
+    {% set items = [
+        { 'href': '02_4customer.html', title:'Заказчикам'},
+        { 'href': '03_4suppliers.html', title:'Поставщикам'},
+        { 'href': '04_tariffs.html', title:'Тарифы'}
+    ] %}
+    <nav class="{{class}}">
+      <div class="menuWrap">
+        {% for item in items %}
+              <a href="{{ item.href }}" class="{% if title == item.title %}is-active{% endif %}">{{ item.title }}</a>
+        {% else %}
+        {% endfor %}
+      </div>
+    </nav>
+{% endmacro %}
+
+
+
+{% macro icon(i) %}
+<svg class="icon icon-{{i}}"><use xlink:href="img/sprite.svg#icon-{{i}}"></use></svg>
+{% endmacro %}
+
+{% macro breadcrumbs(items) %}
+    <ul class="breadcrumbs">
+        {% for item in items %}
+            <li class="breadcrumbs-item{% if loop.last %} is-active{% endif %}">
+              <a href="{% if loop.first %}01_home.html{% else %}08_opt.html{% endif %}" class="breadcrumbs-link">{{item}}</a>
+            </li>
+        {% else %}
+          <li>Null breadcrumbs</li>
+        {% endfor %}
+    </ul>
+{% endmacro %}
+
+
+{% macro pageTabs(tabs) %}
+<div class="tabs">
+  <ul class="tabs__caption">
+    {% for item in tabs %}
+      <li>{{item}}</li>
+    {% endfor %}
+  </ul>
+  {% for item in tabs %}
+    {% set idx = loop.index %}
+    <div class="tabs__content" id="tab_{{idx}}">
+    </div>
+ {% endfor %}
+</div>
+{% endmacro %}
+
+
+{% macro footer_soc(mod="") %}
+<ul class="soc {{mod}}">
+  <li><a href="#">{{icon('fb')}}</a></li>
+  <li><a href="#">{{icon('ok')}}</a></li>
+  <li><a href="#">{{icon('vk')}}</a></li>
+  <li><a href="#">{{icon('insta')}}</a></li>
+</ul>
+{% endmacro %}
+
+
+{% macro pagination() %}
+    <ul class="pagination inline">
+       <li><a href="#"><span>В начало</span></a></li>
+       <li><a href="#"><span>1</span></a></li>
+       <li class="active"><a href="#"><span>2</span></a></li>
+       <li><a href="#"><span>3</span></a></li>
+       <li><a href="#"><span>4</span></a></li>
+       <li><a href="#"><span>5</span></a></li>
+       <li><a href="#"><span>...</span></a>  </li>
+       <li><a href="#"><span>101</span></a></li>
+       <li><a href="#"><span>102</span></a></li>
+       <li><a href="#"><span>В конец</span></a></li>
+     </ul>
+{% endmacro %}
+
+{% macro rating(mod="") %}
+<fieldset class="rating">
+  <input type="radio" id="star5" name="rating" value="5" />
+  <label for="star5" title="Rocks!">
+    {{icon('star')}}
+  </label>
+  <input type="radio" id="star4" name="rating" value="4" />
+  <label for="star4" title="Pretty good">
+    {{icon('star')}}
+  </label>
+  <input type="radio" id="star3" name="rating" value="3" />
+  <label for="star3" title="Meh">
+    {{icon('star')}}
+  </label>
+  <input type="radio" id="star2" name="rating" value="2" />
+  <label for="star2" title="Kinda bad">
+    {{icon('star')}}
+  </label>
+  <input type="radio" id="star1" name="rating" value="1" />
+  <label for="star1" title="Sucks big time">
+    {{icon('star')}}
+  </label>
+</fieldset>
+{% endmacro %}
+
+
+
+
+{% macro orders() %}
+    {% for i in range(0, 30) -%}
+        <div class="b-order-card">
+            <div class="b-order-card__header">Заказ #{{ loop.index }} <span>20.15.2016</span></div>
+            <dl class="b-order-card__desc">
+                <dt class="orderDesc__label">Сумма к оплате:</dt>
+                    <dd class="orderDesc__value">14 999 р</dd>
+                <dt class="orderDesc__label">Оплачен:</dt>
+                    <dd class="orderDesc__value">нет</dd>
+                <dt class="orderDesc__label">Способ оплаты:</dt>
+                    <dd class="orderDesc__value">наличными курьеру</dd>
+                <dt class="orderDesc__label">Способ доставки:</dt>
+                    <dd class="orderDesc__value">300 р</dd>
+            </dl>
+            <div class="b-order-card__footer">
+                <div class="orderStatus">Получен, ожидает оплаты</div>
+                <a href="16-2_cabinet_order-full.html" class="btn btn-ok">Подробнее о заказе</a>
+            </div>
+        </div>
+    {% endfor %}
+{% endmacro %}

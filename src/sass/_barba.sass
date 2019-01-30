@@ -1,0 +1,256 @@
+// Transitions
+// =============================================================================
+$speed:  0.3s
+$speed-fast: ($speed * 0.5)
+$speed-medium: ($speed * 1.5)
+$speed-slow: ($speed * 2)
+$speed-medium-slow: ($speed * 2.5)
+$speed-slower: ($speed * 3)
+$speed-slower-medium: ($speed * 3.5)
+$speed-slowest: ($speed * 4)
+$easing: cubic-bezier(0.4, 0, 0, 1)
+$easingBounce: cubic-bezier(.6,.01,0,1.38)
+
+
+@keyframes textDiscover
+    0%
+        //opacity: 1
+        transform: scale3d(1,0,1)
+        transform-origin: center top
+    40%
+        //opacity: .75
+        transform: scale3d(1,1,1)
+        transform-origin: center top
+    60%
+        //opacity: .5
+        transform: scale3d(1,1,1)
+        transform-origin: center bottom
+    100%
+        //opacity: 0
+        transform: scale3d(1,0,1)
+        transform-origin: center bottom
+
+@keyframes blockDiscover
+    0%
+        transform: scale3d(0,1,1)
+        transform-origin: left center
+    40%
+        transform: scale3d(1,1,1)
+        transform-origin: left center
+    60%
+        transform: scale3d(1,1,1)
+        transform-origin: right center
+    100%
+        transform: scale3d(0,1,1)
+        transform-origin: right center
+
+
+
+.js body
+    .shapeTransit1,
+    .shapeTransit2
+        height: 100%
+        width: 100%
+        bottom: -100%
+        left: 0
+        position: fixed
+    .shapeTransit1
+        background: #d8dde6
+        z-index: 20000
+        +pseudo
+        &::after
+            background-image: url(../img/logo__full.svg)
+            background-size: cover
+            width: 350px
+            height: 100px
+            position: absolute
+            left: 50%
+            top: 20%
+            display: block
+            transform: translate(-50%, -50%)
+            opacity: .5
+    .shapeTransit2
+        background: #f5f0ec
+        z-index: 21000
+
+
+    > .loader
+        position: fixed
+        left: 0
+        right: 0
+        transition: height $speed $speed $easing
+        width: 100%
+        //height: 100%
+        height: 100vh
+        background: #d8dde6
+        overflow: hidden
+        z-index: 999
+        .loader__wrap
+            position: absolute
+            left: 50%
+            top: 50%
+            display: block
+            transform: translate(-50%, -50%)
+            width: 250px
+            height: 78px
+            +pseudo
+            &::before
+            &::after
+                background-image: url(../img/logo__full.svg)
+                background-size: cover
+                width: 330px
+                height: 100px
+                animation: pulse 0.9s alternate infinite
+                +sm
+                    width: 250px
+                    height: 78px
+                @keyframes pulse
+                  from
+                    transform: scale(1.1)
+                  to
+                    transform: scale(0.8)
+                    opacity: 0.5
+.js body
+    overflow: hidden
+    &.is-loaded
+        overflow: initial
+        > .loader
+            height: 0
+
+
+
+
+
+
+
+
+@mixin anim($class, $transform, $delay: .8s)
+  #{$class}
+    opacity: 0
+    transition: all 320ms ease-out
+    transform: #{$transform}
+    //.is-loaded &,
+    .is-animate &
+        opacity: 1
+        transform: none
+        transition-delay: #{$delay}
+
+@mixin anim-items($class, $transform, $animDelay:0.1s, $n:50)
+  +anim($class, $transform)
+  @for $i from 1 through $n
+    //.is-loaded,
+    .is-animate
+        #{$class}:nth-child(#{$i})
+            transition-delay: ($animDelay + ($i - 1) * 0.1s)
+
+//+anim-items('header .container *', 'translateX(-16px)', $speed-slow )
+
+
+
+
+
+
+
+
+
+// .barba-container
+//     height: 100%
+//     +pseudo
+//     &::before
+//         bottom: 0
+//         right: 0
+//         transition: height $speed $easing
+//         width: 100%
+//         height: 100%
+//         background: #f5f0ec
+//         z-index: 200
+//     .is-loaded &
+//         &::before
+//             height: 0
+//     .page__title-text
+//         +pseudo
+//         &::before
+//             bottom: 0
+//             transition: width $speed $easing
+//             transition-delay: 2s
+//             width: 100%
+//             height: 100%
+//             background: #fff
+//             z-index: 70
+//         .is-loaded &
+//             &::before
+//                 width: 0
+
+// .barba-container.is-changing-page
+//     &:before
+//         width: 100%
+//         background: green
+// .barba-container.is-loaded
+//     &:before
+//         width: 0
+
+
+
+
+header
+    transition: transform $speed-slower $easing, background-color $speed-slower $easing
+    html:not(.has-dom-loaded) &
+        transform: translate3d(0, -100%, 0)
+
+
+#fullpage .section .slide__block
+    opacity: 1
+    transition: opacity $speed-medium $easing, transform $speed-medium $easing
+    html:not(.has-dom-loaded) &
+        opacity: 0 !important
+        transform: translate3d(0, 200%, 0)
+
+
+// main
+//     position: relative
+//     &:before
+//         content: ''
+//         position: absolute
+//         top: 0px
+//         left: 0
+//         width: 100%
+//         height: 100%
+//         background-color: #fff
+//         transform: scale3d(1,0,1)
+//         z-index: 100
+//         //.is-loaded &,
+//         .is-animate &
+//             animation-name: textDiscover
+//             animation-duration: $speed-slowest
+//             animation-timing-function: $easing
+
+
+
+// .page__title .page__title-text
+//     position: relative
+//     +pseudo
+//     &:before
+//         +coverdiv
+//         height: 110%
+//         //background: linear-gradient(90deg, #934f84 0.66%, #8e6d9c 99.34%)
+//         background: #fff;
+//         transform: scale3d(0,1,1)
+//         z-index: 100
+//         html:not(.has-dom-loaded) &
+//             animation-name: blockDiscover
+//             animation-duration: $speed-slower * 2
+//             animation-timing-function: $easing
+
+
+.page__title .page__title-text
+    opacity: 1
+    transition: opacity $speed-slower $easing, transform $speed-slower $easing
+    html:not(.has-dom-loaded) &
+        opacity: 0 !important
+        transform: translate3d(0, -100%, 0)
+
+
+.page__content
+    transition: transform $speed-medium $easing, background-color $speed-medium $easing
+    html:not(.has-dom-loaded) &
+        transform: translate3d(0, 100%, 0)

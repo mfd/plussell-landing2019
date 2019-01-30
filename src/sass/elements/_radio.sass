@@ -1,0 +1,59 @@
+$gray: #ccc;
+$accent: #B09C6D;
+$white: #fff;
+.radio
+    min-height: 18px
+    display: inline-block
+    cursor: pointer
+    user-select: none
+    input
+        position: absolute
+        visibility: hidden
+        opacity: 0
+        &:checked
+            + span
+                &:before
+                    //display: block
+                    opacity: 1;
+                    transform: scale(1);
+        + span
+            position: relative
+            padding-left: 25px
+            line-height: 16px
+            display: inline-block
+            &:after
+                content: ''
+                position: absolute
+                left: 0
+                top: 2px
+                height: 18px
+                width: 18px
+                border: 1px solid $gray
+                top: 50%
+                margin-top: -9px
+                border-radius: 50%;
+                background: $white
+                z-index: 0;
+            &:before
+                content: ''
+                position: absolute
+                top: 6px
+                left: 4px
+                width: 10px
+                height: 10px
+                background: $accent
+                top: 50%
+                margin-top: -5px
+                border-radius: 50%;
+                z-index: 1;
+
+                //display: none
+                transition: transform 0.3s, opacity 0.3s;
+                transform: scale(0.2);
+                opacity: 0;
+
+    &:hover
+        input + span:after
+            border: 1px solid darken($gray,10%)
+
+

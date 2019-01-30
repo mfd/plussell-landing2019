@@ -1,0 +1,154 @@
+$darken: 7%
+$gray: #ccc;
+$accent: #F6C859;
+$accent-blue: blue;
+$default: transparent;
+.btn
+    display: inline-block
+    color: #333
+    background: $accent
+    border: 2px solid $accent
+    text-align: center
+    border-radius: 4px
+
+    letter-spacing: .5px
+    transition: background .3s
+
+
+    //+light
+    font-weight: normal
+    line-height: 1.4
+    white-space: nowrap
+    position: relative
+
+    padding-top: 0
+    padding-bottom: 0
+    //height: 44px
+    //line-height: 44px - 1px
+
+    font-size: 12px
+    text-align: center
+    font-weight: 900
+    padding: 0 20px
+    line-height: 38px
+    height: 40px
+    text-transform: uppercase
+    transition: transform 500ms cubic-bezier(.17,.67,.6,1.3),background .3s
+
+    +gpu
+    +xs
+        width: auto
+        display: block
+    &:hover
+        color: #333;
+        background: rgba($accent, 0.9)
+        .icon
+            transform: translateX(3px)
+            transform: translate(3px,-50%)
+    &:active
+        transform: scale(.9)
+    &.btn_icon
+        padding-right: 50px
+    .icon
+        fill: #fff
+        display: inline-block
+        vertical-align: middle
+        font-size: 16px
+        position: relative
+        top: -1px
+        transition: transform .3s linear
+
+        position: absolute
+        right: 30px
+        top: 50%
+        transform: translate(0,-50%)
+        +xs
+            //display: none
+.btn_lg
+    font-size: 20px
+    position: relative
+    height: 48px
+    line-height: 48px
+    .icon
+        position: absolute
+        top: 50%
+        right: 20px
+        margin: auto
+        font-size: 20px
+.btn_sm
+    position: relative
+    font-size: 13px
+    height: 35px
+    line-height: 35px
+    padding: 0 20px
+
+.btn_default
+    background: $default
+    color: #fff
+    border: 2px solid #fff
+    &:hover
+        color: #333
+        background: #f5f5f5;
+// .button_full
+//  width: 100%
+//  display: block
+//  position: relative
+//  max-width: 234px
+//  padding-right: 50px
+//  margin: 0 auto
+//  +xs
+        // max-width: 600px
+    // .icon
+    //  position: absolute
+    //  top: 0
+    //  bottom: 0
+    //  right: 20px
+    //  margin: auto
+    //  font-size: 20px
+.btn_blue
+    background: $accent_blue
+    border-color: $accent_blue
+    &:hover
+        background: rgba($accent_blue, 0.9)
+.btn_white
+    background: #fff
+    color: #333
+    border: 1px solid  #eaeaea
+    .icon
+        fill: #333
+    .filter__arrowdown
+        content: ''
+        position: absolute
+        top: 50%
+        right: 20px
+        margin-top: -2px
+        +arr(8,5,#000,b)
+        pointer-events: none
+    +hover
+        background: #fafafa
+    &:active,&:hover
+        background: #fafafa
+.btn_afterlist
+    margin-left: 28px
+    +xs
+        margin-left: 0
+.btn_big
+    // padding-top: 12px
+    // padding-bottom: 14px
+    height: 48px
+    line-height: 48px
+
+.btn-close
+    background: transparent
+    position: absolute
+    top: 0
+    right: 0
+    height: 50px
+    width: 60px
+    text-align: center
+    display: block
+    +vertical
+    cursor: pointer
+    .icon
+        font-size: 23px
+        vertical-align: middle

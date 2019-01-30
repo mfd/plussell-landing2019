@@ -1,0 +1,31 @@
+.fake-select
+    position: relative;
+    width: 100%;
+
+.fake-select__button
+    border: 1px solid #BDBDBD;
+    cursor: pointer;
+    padding: 9px 12px;
+    border-radius: 5px;
+    +pseudo
+    &:after
+        width: 30px;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: initial;
+        border-left: 1px solid #BDBDBD;
+        background-image: url("data:image/svg+xml,%3Csvg width='13' height='8' viewBox='0 0 13 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0L5.736 6L11.472 0' transform='translate%280.835938 1%29' stroke='%23BDBDBD' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-position: center;
+
+.fake-select select
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+

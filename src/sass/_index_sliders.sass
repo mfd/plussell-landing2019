@@ -1,0 +1,156 @@
+.owl-carousel
+    //height: 100vh;
+    width: 100%;
+
+.owl-carousel.owl-theme.owl-oneslide
+    .owl-dots
+        .owl-dot
+            span
+                background: rgba(51, 51, 51, 0.4)
+        .owl-dot.active
+            span
+                background: #333333
+
+.hero
+    &__item
+        width: 100%;
+        //height: 500px;
+        height: 100%;
+        position: relative;
+        display: table;
+        +sm
+            height: 300px;
+            margin-top: 2em;
+    &__img
+        width: 100%;
+        height: 100%;
+        background-size: contain;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 80% 100%;
+        position: absolute;
+        z-index: 10;
+        +sm
+            //background-position: 50% 100%;
+    &__item
+        position: relative;
+        +pseudo
+        &:before
+            display: none;
+        &:after
+            z-index: 0;
+            background: #000;
+            width: 100%;
+            height: 1px;
+            top: 50%;
+    &__info
+        // display: table-cell;
+        // vertical-align: middle;
+        z-index: 20;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(0,-50%);
+    &__title
+        font-size: 18px;
+        padding-bottom: .5em;
+        //border-bottom: 1px solid #333;
+        padding: 0;
+        +md
+            background: rgba(255, 255, 255, 0.75);
+        &.special
+            text-transform: uppercase;
+            font-size: 36px;
+            font-weight: 100;
+            padding: 0;
+            margin-top: -20px;
+    &__link
+        font-size: 14px;
+        padding: 0;
+
+.owl-oneslide
+
+
+.owl-carousel .owl-stage
+    padding: 10px 0;
+
+.owl-gallery
+    margin-right: -20px;
+
+.owl-carousel .owl-dots
+    position: absolute;
+    bottom: 35%;
+    left: 5%;
+    .ow-dot span
+        background: #97989A;
+    .ow-dot.active span
+        background: #000000;
+
+.owl-carousel.owl-gallery .owl-dots
+    //display: none;
+.owl-carousel.owl-oneslide .owl-nav
+    //display: none;
+
+.owl-carousel.owl-gallery .owl-nav
+    position: absolute;
+    top: -40px;
+    top: -60px;
+    //right: 5%;
+    right: 30px;
+    button
+        margin: 0;
+    .owl-prev span
+        border-right: 0;
+    button span
+        height: 30px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        padding: 5px 20px;
+        color: #000;
+
+.owl-carousel.owl-gallery.owl-theme .owl-nav [class*=owl-]:hover
+    background: none;
+
+.owl-gallery
+    +clr
+    display: block
+    width: 100%;
+    z-index: 1;
+
+
++sm
+    .owl-carousel .owl-stage-outer
+        margin: 0 2em
+        .item
+            margin: 0
+            padding-left: 0
+    .owl-carousel.owl-oneslide .owl-stage-outer
+        margin: 0
+    .owl-carousel.owl-oneslide .owl-dots
+        bottom: 15%
+        left: 0
+        background: rgba(255, 255, 255, .65);
+        padding: .25em;
+
+    .owl-carousel.owl-gallery .owl-nav
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        .owl-prev, .owl-next
+            top: 30%
+        .owl-prev
+            position: absolute;
+            left: 0;
+        .owl-next
+            position: absolute;
+            right: 0;
+        button span
+            border: 0
+            font-size: 72px
+            padding: 0
+            color: #949494
+
+
+

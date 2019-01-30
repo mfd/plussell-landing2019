@@ -1,0 +1,7 @@
+ProjectTitle: ps landing
+
+PageList:
+- file: 01_home.html
+  ready: 10
+- file: 02_item.html
+  ready: 80

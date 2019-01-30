@@ -1,0 +1,152 @@
+$gray: #ccc;
+//$light: #eee;
+
+.input-inline
+    display: flex;
+    align-items: center;
+    .input-group
+        margin-right: 20px
+
+.form-group, .input-group
+    position: relative;
+    margin-bottom: 10px;
+
+    .form-control
+        height: 35px;
+        border-radius: 5px;
+        border: 1px solid #BDBDBD;
+        font-size: 14px;
+        line-height: 35px;
+        padding: 0 10px;
+        margin-top: 15px;
+        margin-bottom: 0;
+        &::placeholder
+            color: #c0ccd3
+            transition: color .5s $ease
+
+        &:focus
+            border-color: #65B6F0;
+            border: 2px solid #B09C6D;
+            padding: 0 9px;
+            + label
+                opacity: 1;
+                transform: translateY(0);
+    .control-label
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        font-weight: bold;
+        font-size: 9px;
+        text-transform: uppercase;
+        padding-left: 6px;
+        color: #B09C6D;
+        transition: transform 0.3s $ease, opacity 0.3s $ease;
+        opacity: 0;
+        transform: translateY(100%);
+
+
+    input.form-control:focus
+        + .control-label
+            transform: translateY(0);
+            opacity: 1;
+        &::placeholder
+            color: transparent;
+.input-group
+
+
+
+.search
+    width: 320px
+    position: relative
+    +r(1800)
+        width: 200px
+    +r(1480)
+        width: auto
+        // +rmin(668)
+        +rmin(1200)
+            width: auto
+            position: relative
+            text-align: right
+    &__input
+        border-radius: 5px
+        padding: 0 30px 0 11px
+        height: 30px
+        border: 1px solid $gray
+        width: 100%
+        font-size: 14px
+        //+reg
+        ::-ms-clear
+            display: none
+        +placeholder
+            text-transform: uppercase
+            color: #000
+            opacity: .5
+            letter-spacing: 1px
+            //+light
+        +r(1480)
+            // +rmin(668)
+            +rmin(1200)
+                width: 300px
+                position: absolute
+                right: 0
+                visibility: hidden
+                opacity: 0
+                transition: visibility .3s, opacity .3s
+                &.is-open
+                    visibility: visible
+                    opacity: 1
+        +xs
+            height: 40px
+            line-height: 40px
+            font-size: 18px
+    &__btn
+        position: absolute
+        right: 0
+        top: 0
+        bottom: 0
+        margin: auto
+        background: transparent
+        width: 30px
+        +r(1480)
+            // +rmin(668)
+            +rmin(1200)
+                height: 30px
+                position: relative
+                z-index: 2
+        +xs
+            //background: $accent
+            width: 50px
+            border-radius: 0 4px 4px 0
+        .icon
+            //fill: $accent_blue
+            font-size: 16px
+            margin-top: 2px
+            +xs
+                fill: #fff
+
+.input
+    +clr
+    input
+        height: 44px
+        line-height: normal
+        //+light
+        width: 100%
+        border: 1px solid $gray
+        border-radius: 4px
+        padding: 0 15px
+        font-size: 16px
+    .input__short
+        width: 30%
+        float: left
+    .input__long
+        width: 66%
+        float: right
+.input_big
+    input
+        height: 48px
+
+.input-wrapper
+    max-width: 340px;
+

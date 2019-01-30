@@ -1,0 +1,88 @@
+---
+title: Поставщикам
+breadCrumbsItems: ['Главная','Внутренняя','']
+footerWide: true
+isLogged: true
+barbaNameSpace: oneitem
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	<main class="itemPage">
+		<div class="page__title">
+			<span class="page__title-text">
+			{{ title }}
+			</span>
+		</div>
+		<div class="page__content">
+			<div class="row">
+			<p>
+Размещая в системе Plussell ваши товары и услуги, вы гарантированно попадете в поисковые запросы заказчиков и получите новые заявки и заказы в единой автоматизированной системе.
+			</p>
+			<p>
+Система Plussell автоматически свяжет ваши номенклатурные позиции с номенклатурой заказчика, что делает дальнейшее взаимодействие с заказчиком  удобным, быстрым и понятным.
+			</p>
+			<p>
+В режиме реального времени отслеживайте текущий статус заявок и заказов, контролируйте процессы отгрузки и приемки, выгружайте ваши прайс-листы и легко находите новых заказчиков.
+			</p>
+			</div>
+			<div class="row">
+			   	<div class="tabs tabs-modules">
+			    		<ul class="tabs__caption">
+			    			<li class="tabs__caption-item active"><a href="#desc_tab-1">Заявки</a></li>
+			    			<li class="tabs__caption-item"><a href="#desc_tab-2">Заказы </a></li>
+			    			<li class="tabs__caption-item"><a href="#desc_tab-3">Поставки</a></li>
+			    		</ul>
+			    		<div class="tabs__container">
+			    			<div class="tabs__content active" id="desc_tab-1">
+								<dl class="module">
+									<dt class="module__pic">
+										<img class="module__pic-item" src="https://trello-attachments.s3.amazonaws.com/5a40dcb2b35541b64235ccd1/5c4714d820b1917e5c005a54/6db22207c26bfd219a0a5eb14b72f254/1_%D0%BF%D1%80%D0%BE%D0%B4%D0%B0%D1%8E_%D1%81%D0%BE%D1%82%D1%80%D1%83%D0%B4%D0%BD%D0%B8%D0%BA.png" />
+									</dt>
+									<dd class="module__desc">
+										<p>Получайте целевые заявки от заказчиков. Участвуйте в открытых заявках интересующих вас заказчиков</p>
+
+									</dd>
+								</dl>
+			    			</div>
+			    			<div class="tabs__content" id="desc_tab-2">
+								<dl class="module">
+									<dt class="module__pic">
+										<img class="module__pic-item" src="https://trello-attachments.s3.amazonaws.com/5a40dcb2b35541b64235ccd1/5c4714d820b1917e5c005a54/b2ef7293ed11772820222e734166f32f/2_%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D1%8B_%D0%BF%D1%80%D0%BE%D0%B4%D0%B0%D1%8E-%D1%81%D0%BE%D1%82%D1%80%D1%83%D0%B4%D0%BD%D0%B8%D0%BA.png" />
+									</dt>
+									<dd class="module__desc">
+										<p>Закрепляйте в системе Plussell ваши договорные отношения с заказчиками и получайте прямые заказы по вашим прайс-листам. А новые заказчики смогут в один клик отправить вам заказы по вашим товарам из поисковой выдачи.</p>
+										<p>Получить все закрывающие документы по сделке и занести в реестр платежей акцептованную сумму поставки.</p>
+									</dd>
+								</dl>
+			    			</div>
+
+			    			<div class="tabs__content" id="desc_tab-3">
+								<dl class="module">
+									<dt class="module__pic">
+										<img class="module__pic-item" src="https://trello-attachments.s3.amazonaws.com/5a40dcb2b35541b64235ccd1/5c4714d820b1917e5c005a54/0847a576788643f448e7291e2ec337e4/3_%D0%9B%D0%9F.png" />
+									</dt>
+									<dd class="module__desc">
+										<p>Все процессы поставки от подписания спецификации до приемки и оплаты будут проходить в режиме реального времени под вашим контролем, предоставив вам и вашим заказчикам полную прозрачность поставки, тем самым повысив качество и эффективность сотрудничества.</p>
+<p>Реестр поставок покажет всю картину ваших поставок, даст возможность подключать ваши склады и логистику, а ответственные сотрудники и кладовщики получат удобные инструменты управления и контроля процессами отгрузки и приемки.</p>
+									</dd>
+								</dl>
+			    			</div>
+			    		</div>
+			    		<!-- .tabs__container-->
+			    	</div>
+    				<!-- .tabs-->
+			</div>
+			<div class="row">
+          		{% include "partials/_ps-tools.html" %}
+			</div>
+			<div class="row">
+
+			</div>
+			<div class="row">
+
+			</div>
+		</div>
+	</main>
+
+{% endblock %}

@@ -1,0 +1,58 @@
+$gray: #ccc;
+$accent: #B09C6D;
+.checkbox
+    min-height: 18px
+    display: inline-block
+    cursor: pointer
+    user-select: none
+    input
+        position: absolute
+        visibility: hidden
+        opacity: 0
+        &:checked
+            + span
+                &:before
+                    //display: block
+                    opacity: 1;
+                    transform: scale(1);
+        + span
+            position: relative
+            padding-left: 30px
+            line-height: 18px;
+            display: inline-block
+            &:after, &:before
+                margin-top: 2px
+            &:after
+                content: ''
+                position: absolute
+                left: 0
+                top: 0
+                height: 18px
+                width: 18px
+                //border: 1px solid $gray
+                background: url(../img/uncheck.svg);
+                top: 0
+                //margin-top: -9px
+                z-index: 0;
+            &:before
+                content: ''
+                position: absolute
+                top: 0px
+                left: 0px
+                width: 18px
+                height: 18px
+                //background: $accent
+                background: url(../img/check.svg);
+                top: 0;
+                z-index: 1;
+
+                //display: none
+                transition: transform 0.3s, opacity .3s
+                transform: scale(0.2)
+                opacity: 0
+                //margin-top: -5px
+    &:hover
+        input + span:after
+            //border: 1px solid darken($gray,10%)
+
+

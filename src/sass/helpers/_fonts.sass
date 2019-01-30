@@ -1,0 +1,28 @@
+// +font("galscregular", galsc-webfont)
+// +font("galscitalic", galsc-italic-webfont)
+
+// +font("galscbold", galsc-bold-webfont)
+// +font("galscbold_italic", galsc-bolditalic-webfont)
+@import https://fonts.googleapis.com/css?family=Oswald:400,500,600,700&amp;subset=cyrillic
+
+
+@import ../../fonts/SFUI.css
+//@import _fontsq
+
+=f($name, $font-size: null, $line-height: null, $letter-spacing: null)
+  $font-family: null
+  @if $name == "gals"
+    $font-family: "galscregular"
+  @if $name == "gb"
+    $font-family: "galscbold"
+
+
+  font-family: $font-family, Helvetica Neue, Helvetica, Arial, sans-serif
+  @if $font-family != null
+    font-weight: normal
+  @if $font-size != null
+    font-size: $font-size * 1px
+  @if $line-height != null
+    line-height: $line-height/$font-size
+  @if $letter-spacing != null
+    letter-spacing: ($letter-spacing / 1000) * 1em

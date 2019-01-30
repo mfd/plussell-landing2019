@@ -1,0 +1,183 @@
+.container
+    //max-width: 1420px
+    margin: 0 auto
+    padding: 0 0px
+    position: relative
+    overflow: hidden
+    +sm
+        padding: 0 0
+    &__in
+        max-width: 580px
+        margin: 0 auto
+
+.wrapper
+    padding: 0 50px
+    +sm
+        padding: 0 15px
+
+.row
+    +clr
+    margin: 0 -20px -25px
+    margin-bottom: 0
+    +sm
+        margin-left: -15px
+        margin-right: -15px
+    > div
+        margin-bottom: 25px
+        padding: 0 20px
+        //float: left
+        +sm
+            padding: 0 15px
+    > div.no-padding,
+    > .owl-carousel
+        padding: 0
+    > .tabs
+        //float: none
+.out
+    position: relative
+    overflow: hidden
+    +clr
+
+
+header
+    position: relative
+    min-height: 80px
+    min-width: 320px
+    padding: 10px 0
+
+    //background: rgba(242, 242, 242, .85)
+    //background: rgba(255, 255, 255, .85)
+    z-index: 1
+    box-shadow: none
+    margin-bottom: 0em
+
+    +sm
+        padding: 0
+        //padding-right: 40px
+        width: 100%
+        height: 80px
+        min-height: 80px
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25)
+        position: fixed
+
+        display: flex
+        align-items: center
+
+        z-index: 900
+        //top: -1px
+        background: rgba(0,0,0,.6)
+        overflow: hidden
+    // .body--gray &
+    //     background: rgba(218, 219, 223, .85)
+    //     transition: background 1s ease
+    // .body--smoke &
+    //     background: rgba(242, 242, 242, .85)
+    //     transition: background 1s ease
+    // .body--white &
+    //     background: rgba(255, 255, 255, .85)
+    //     transition: background 1s ease
+
+main
+    float: right
+    width: calc(100% - 285px)
+    min-height: 400px
+    padding: 0!important
+    margin: 0!important
+    +sm
+        float: none
+        width: 100%
+        padding: 1em
+        //padding-top: 110px
+        min-height: initial
+
+footer
+    padding: 20px 0
+    overflow: hidden
+    //margin-top: 100px
+    //padding-left: 280px
+    //max-width: 1220px
+    //border-top: 1px solid #E0E0E0
+    //float: right
+    //width: calc(100% - 280px)
+    .footer__in
+        margin-left: 280px
+        padding-top: 25px
+        border-top: 3px solid #eee
+        #fullpage &
+            margin-left: -20px
+        +sm
+            padding: 25px 0
+            margin: 0
+    &.footer__wide .footer__in
+        margin-left: 0px
+    +md
+        padding-top: 25px
+    +sm
+        padding: 1em
+        width: 100%
+
+.container
+    padding-top: 80px
+    @media only screen and (max-height: 850px)
+        padding-top: 80px
+
+    header &
+        padding: 0 20px
+        overflow: initial
+        +sm
+            padding: 0 10px 0 0
+    footer &
+        padding-top: 0px
+header, aside
+    z-index: 500
+
+header
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    z-index: 100
+// aside
+//     position: fixed
+//     top: 100px
+//     left: 30px
+//     z-index: 100
+
+// main
+//     margin-top: 100px
+//     +sm
+//         margin-top: 40px
+//         padding-top: 0
+
+
+.itemPage,
+.pageBlog,
+.pageStoreMap,
+.pageShopcart,
+.pageRegLogRec,
+.pageOrdernow
+    float: left
+    width: 100%
+    +sm
+        margin-top: 80px!important
+    .page__title
+        background: transparent
+        margin: 0
+        padding: 1em 0
+        font: 700 36px/40px 'Oswald', sans-serif
+        color: #fff
+        text-transform: uppercase
+        display: flex
+        justify-content: center
+
+    .page__content
+        background: #fff
+        padding: 2em 3em
+        min-height: 900px
+        +sm
+            padding: 1em 2em
+            min-height: initial
+
+
+
+

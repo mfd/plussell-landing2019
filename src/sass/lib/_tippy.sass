@@ -1,0 +1,30 @@
+#moreinfo-tippy
+  height: 300px;
+
+
+
+$color: red;
+
+.tippy-tooltip.mdrt-theme
+  background: #FFFFFF;
+  border: 1px solid #E0E0E0;
+  color: #333;
+  padding: 15px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  .tippy-dropdown li
+    text-align: left;
+    margin-bottom: 5px
+    font-size: 16px;
+    a
+      color: #ABABAB
+    &.is-active a
+      color: #333333
+
+
+
+
+.tippy-popper[x-placement^=bottom] .tippy-tooltip.mdrt-theme .tippy-arrow
+    border-bottom: 7px solid white;
+    border-top-color: red;
+    display: none

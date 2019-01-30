@@ -1,0 +1,113 @@
+main
+    margin-bottom: 1em;
+    padding-bottom: 1em
+.page__hero
+    +clr
+    margin-bottom: 1em;
+
+
+.page__title
+    +clr
+    margin-bottom: .5em;
+    margin-bottom: 25px;
+    +sm
+        margin-bottom: 15px;
+    //margin-left: -13px;
+    h1
+        margin-bottom: 0
+    &-text
+        float: left;
+        line-height: 38px;
+        +md
+            float: left;
+        +sm
+            float: none;
+            font-size: 24px
+    &-right
+        float: right;
+        +md
+            float: left;
+            margin-left: 1em;
+        +sm
+            margin-left: 0;
+            float: none;
+
+.page__title
+    .title__viewAll
+        display: inline-block
+        opacity: .5
+        font-size: 40%;
+        margin-left: 10px;
+        +sm
+            display: block;
+            margin: 0;
+    &-right
+
+    &-menu
+        float: right;
+        font-size: 16px;
+        margin-top: 1em;
+        margin-bottom: 0;
+        +sm
+            float: none
+        li
+            float: left;
+            margin-right: 1em;
+            margin-bottom: 0;
+            list-style: none;
+            +sm
+                margin-left: 0;
+            a
+                color: #ABABAB;
+        .active
+            a
+                color: #333333;
+                &:after
+                    border-color: #333333
+
+
+
+.page__news
+    +clr
+    margin-top: .25em;
+    margin-bottom: 3em;
+    .news
+        &__item
+            float: left;
+            width: 48%
+            h5
+                font-size: 18px;
+                font-weight: normal;
+                color: #333333;
+                margin-bottom: .5em;
+            p
+                color: #ABABAB;
+                font-size: 16px!important;
+                margin-bottom: 5px;
+
+            a, .more
+                color: #333333;
+                font-size: 16px!important;
+
+
+
+
+.main
+    &__row
+        +clr
+        display: flex;
+        //justify-content: space-between;
+        align-items: stretch;
+    &__col1
+        width: 270px;
+        +md
+            width: 400px;
+        +sm
+            display: none
+    &__col2
+        width: 850px;
+        +md
+            width: 450px;
+        +sm
+            width: 100%
+            padding: 0 1em

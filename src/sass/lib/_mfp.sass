@@ -1,0 +1,94 @@
+body.mfp-zoom-out-cur
+  overflow: hidden!important
+  .mfp-bg
+    background: rgba(11, 11, 11, .85);
+  //position: fixed;
+
+  img.mfp-img
+    max-height: 700px!important;
+    +md
+      max-height: 500px!important;
+    +sm
+      max-height: 60%!important;
+  .mfp-bottom-bar
+      margin-top: -26px;
+
+  .mfp-image-holder .mfp-close
+    margin-right: -50px;
+    margin-top: -5px;
+    transform: scale(1.5)
+
+
+
+//AJAX POPUPS
+.mfp-content
+  max-width: 960px
+  margin: 20px auto
+  +md
+    max-width: 1200px
+    margin: 40px auto
+.modal__content
+  overflow: hidden;
+  background: #fff;
+  padding: 40px;
+  .container
+    padding: 0;
+
+.mfp-container
+  padding: 0 20px
+  +md
+    padding: 0 40px
+
+.mfp-bg
+  transition: transform 600ms $ease 0ms
+  transform: translateX(-100%)
+  &.mfp-ready
+    transform: translateX(0%)
+  &.mfp-removing
+    transform: translateX(100%)
+    transition: transform 600ms $ease 200ms
+
+.mfp-close
+  background: none
+  position: absolute
+  top: 20px !important
+  right: 20px !important
+  opacity: 1 !important
+  width: auto !important
+  transform: translateZ(0)
+  width: 20px
+  height: 20px
+  +sm
+    top: 40px !important
+    right: 40px !important
+  svg
+    display: block
+    pointer-events: none
+    width: 20px
+    height: 20px
+
+.mfp-wrap
+  -webkit-overflow-scrolling: touch
+  .mfp-content
+    transform: translateY(-1000px)
+    > .container
+      transform: translateX(-100%)
+    .mfp-close
+      opacity: 0 !important
+  &.mfp-ready
+    .mfp-content
+      transform: translateY(0)
+      transition: transform 800ms $ease
+      > .container
+        transform: translateX(0)
+        transition: transform 800ms $ease
+      .mfp-close
+        opacity: 1 !important
+        transition: opacity 400ms linear 600ms
+  &.mfp-removing
+    .mfp-content
+      transform: translateY(1000px)
+      transition: transform 800ms $ease
+      .mfp-close
+        opacity: 0 !important
+        transition: opacity 400ms linear 0ms

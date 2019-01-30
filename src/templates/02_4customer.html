@@ -1,0 +1,81 @@
+---
+title: Заказчикам
+breadCrumbsItems: ['Главная','Внутренняя','']
+footerWide: true
+isLogged: true
+barbaNameSpace: oneitem
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	<main class="itemPage">
+		<div class="page__title">
+			<span class="page__title-text">
+			{{ title }}
+			</span>
+		</div>
+		<div class="page__content">
+			<div class="row">
+			<p>
+				Комплексное управление процессом закупок в масштабах всей организации от формирования заявки до оплаты происходит в единой автоматизированной системе, поддерживая единый стандарт взаимодействия и сотрудничества с поставщиками во всех категориях прямых и косвенных затрат.
+			</p>
+			</div>
+			<div class="row">
+			   	<div class="tabs tabs-modules">
+			    		<ul class="tabs__caption">
+			    			<li class="tabs__caption-item active"><a href="#desc_tab-1">Заявки</a></li>
+			    			<li class="tabs__caption-item"><a href="#desc_tab-2">Лист поставки</a></li>
+			    			<li class="tabs__caption-item"><a href="#desc_tab-3">Заказы</a></li>
+			    		</ul>
+			    		<div class="tabs__container">
+			    			<div class="tabs__content active" id="desc_tab-1">
+								<dl class="module">
+									<dt class="module__pic">
+										<img class="module__pic-item" src="https://trello-attachments.s3.amazonaws.com/5a40dcb2b35541b64235ccd1/5c4714d820b1917e5c005a54/0847a576788643f448e7291e2ec337e4/3_%D0%9B%D0%9F.png" />
+									</dt>
+									<dd class="module__desc">
+										<p>Автоматизирует такие процессы, как формирование заявки по номенклатуре организации, поиск поставщиков, сбор и анализ предложений, коммуникацию с поставщиками, управление конкурентным листом вплоть до согласования и выбора поставщиков</p>
+
+									</dd>
+								</dl>
+			    			</div>
+			    			<div class="tabs__content" id="desc_tab-2">
+								<dl class="module">
+									<dt class="module__pic">
+										<img class="module__pic-item" src="https://trello-attachments.s3.amazonaws.com/5a40dcb2b35541b64235ccd1/5c4714d820b1917e5c005a54/0847a576788643f448e7291e2ec337e4/3_%D0%9B%D0%9F.png" />
+									</dt>
+									<dd class="module__desc">
+										<p>Модуль в едином интерфейсе позволяет подписывать договоры и спецификации по выбранным поставщикам и контролировать процессы отгрузок и приемки по расхождениям товара и срокам поставки. </p>
+										<p>Получить все закрывающие документы по сделке и занести в реестр платежей акцептованную сумму поставки.</p>
+									</dd>
+								</dl>
+			    			</div>
+
+			    			<div class="tabs__content" id="desc_tab-3">
+								<dl class="module">
+									<dt class="module__pic">
+										<img class="module__pic-item" src="https://trello-attachments.s3.amazonaws.com/5a40dcb2b35541b64235ccd1/5c4714d820b1917e5c005a54/0847a576788643f448e7291e2ec337e4/3_%D0%9B%D0%9F.png" />
+									</dt>
+									<dd class="module__desc">
+										<p>Быстрое и простое выполнение заказов по прайс-листам поставщиков позволит контролировать условия договора и наладить бесперебойные поставки для соблюдения сроков и планов производства</p>
+									</dd>
+								</dl>
+			    			</div>
+			    		</div>
+			    		<!-- .tabs__container-->
+			    	</div>
+    				<!-- .tabs-->
+			</div>
+			<div class="row">
+          		{% include "partials/_ps-tools.html" %}
+			</div>
+			<div class="row">
+
+			</div>
+			<div class="row">
+
+			</div>
+		</div>
+	</main>
+
+{% endblock %}

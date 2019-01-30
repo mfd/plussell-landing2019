@@ -1,0 +1,36 @@
+{% import "partials/_mixins.html" as mixins %}
+<!doctype html lang="ru">
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>{% if title %}{{ title }}{% else %}Template{% endif %} - - PLUSSELL - электронная рабочая система для автоматизации и контроля торгово-закупочных процессов предприятий</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fff" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="author" content="Kamil Kashaev" />
+    <link rel="stylesheet" media="all" href="js/vendors.min.css" />
+    <link rel="stylesheet" media="all" href="css/app.css" />
+    {# {% include "../partials/_media-tags.html" %} #}
+    <script>
+      document.documentElement.classList.remove('no-js');
+      document.documentElement.classList.add('js');
+    </script>
+  </head>
+  <body>
+      <div id="barba-wrapper">
+        <div class="barba-container modal__content ajaxcontent" data-namespace="{% if barbaNameSpace %}{{ barbaNameSpace }}{% else %}page{% endif %}" data-title="{{ title }}">
+            <!-- BEGIN content -->
+            {% block content %}
+            {% endblock %}
+            <!-- END content -->
+        </div>
+      </div><!-- //#barba-wrapper -->
+    <div class="shapeTransit1"></div>
+    <div class="shapeTransit2"></div>
+
+    <!-- BEGIN scripts -->
+
+     <!-- END scripts -->
+  </body>
+</html>

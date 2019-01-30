@@ -1,0 +1,219 @@
+header
+    .container
+        max-width: 1240px;
+
+.barba-container
+    background: url('../img/home_bg.png')
+    background-size: cover
+
+#fullpage
+    +sm
+        margin-top: 80px
+#fullpage .section
+    .slide__block
+        display: flex
+        align-items: center
+        justify-content: center
+        height: 100%
+        +sm
+            height: initial
+        .slide__block-wrap
+            background: linear-gradient(135deg, #E21B4B 0.66%, #7ECDE7 99.34%)
+            z-index: 0;
+            +pseudo
+            &:after
+                +coverdiv
+                background: url('../img/slide_bg.png')
+                background-size: cover;
+                border-radius: 50px
+                opacity: .4
+                z-index: -1
+        .slide__block-wrap
+            width: 90%
+            height: 70%
+            max-width: 1240px
+            max-height: 830px
+            border-radius: 50px
+            padding: 2em
+            color: #fff;
+            overflow: hidden
+
+            +md
+                width: 95%
+            +sm
+                width: 100%
+                height: initial;
+                //height: 100%
+                border-radius: 0
+                &:after
+                    border-radius: 0
+            p
+                color: #fff;
+            img
+              width: 100%
+              height: auto
+              margin: 2em 0
+            img.contSlide
+              width: 90%
+              height: 60%
+              margin: 8% auto
+
+        .slide__block-row
+            display: flex
+            flex-direction: row
+            .slide__col-one
+                flex: 0 0 50%
+            p.lead
+                font-size: 22px
+                +md
+                    font-size: 18px
+                +sm
+                   font-size: 16px
+#fullpage .section
+    .slide__block
+        .slide__block-wrap
+            //padding-top: 6em
+
+
+
+.slide__block
+    .icon-logo__full
+        fill: white
+        width: 100%
+        height: auto
+        margin-bottom: 1em
+        max-width: 400px
+        +md
+            height: 100px;
+            margin: 0
+
+
+
+#fullpage .section .slide__block
+    .slideTitle
+        font: 700 54px/74px 'Oswald',sans-serif;
+        text-transform: uppercase
+        @media only screen and (max-width: 1250px)
+            font: 700 40px/60px 'Oswald',sans-serif;
+        +md
+            font: 700 44px/64px 'Oswald',sans-serif;
+        +sm
+            font: 700 24px/34px 'Oswald',sans-serif;
+    .hero-buttons
+        .btn
+            &:hover
+                transform: scale(1.1)
+#fullpage .section .slide__block
+    .benefits
+        display: flex
+        align-content: center
+        height: 100%
+    .benefits__list
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        align-content: center
+        +sm
+            flex-direction: column
+            justify-content: flex-start
+            align-content: flex-start
+
+        .benefits__item
+            width: 45%
+            margin-right: 5%
+            margin-bottom: 5%
+            padding-left: 140px
+            position: relative
+            & + .benefits_item
+                margin-top: 0
+            &:last-child
+                margin-bottom: 0
+            +sm
+                width: 100%
+
+        .benefits__item
+            font: 300 26px 'Oswald', sans-serif
+            letter-spacing: .05em
+            color: #fff;
+            text-transform: uppercase
+            &:before
+                content: ''
+                display: block
+                position: absolute
+                left: 0
+                top: 0
+                width: 120px
+                height: 120px
+                background-image: url('../images/checkmark.svg')
+                background-position: center
+                background-repeat: no-repeat
+                background-size: cover
+        @for $i from 1 through 10
+            .benefits__item
+                &.icon0#{$i}
+                    &:before
+                        background-image: url('../icons/0#{$i}.svg')
+        @media only screen and (max-width: 1250px)
+            .benefits__item
+                font-size: 22px
+                padding-left: 90px
+                &:before
+                    width: 80px
+                    height: 80px
+        +md
+            .benefits__item
+                font-size: 18px
+                padding-left: 100px
+                &:before
+                    width: 80px
+                    height: 80px
+        +sm
+            .benefits__item
+                font-size: 14px
+                padding-left: 60px
+                &:before
+                    width: 50px
+                    height: 50px
+
+
+
+#fullpage
+    .section
+        +sm
+            //padding-top: 25px
+        &.one
+            //background: rgba(255, 0, 0, 0.5)
+            overflow: hidden
+        &.two
+            //background: rgba(255, 255, 0, 0.5);
+            overflow: hidden
+        &.three
+            //background: rgba(255, 200, 0, 0.5);
+            overflow: hidden
+
+
+    .container
+        margin-top: 0
+        padding-top: 0
+        // height: 100%
+        .main__col2
+            padding-top: 120px;
+            //height: 80vh;
+            //padding-bottom: 120px;
+    .section.one,
+    .section.two
+        .container
+             height: 100%
+        .owl-carousel
+            height: 100%
+            .owl-stage-outer, .owl-stage, .owl-item
+                height: 100%
+        // .hero-item
+        //     height: 80vh;
+        // .owl-carousel
+        //     height: 80vh;
+        //     .owl-stage-outer, .owl-stage, .owl-item
+        //         height: 80vh;
+    .iScrollVerticalScrollbar, .iScrollLoneScrollbar
+        display: none
+

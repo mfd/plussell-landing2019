@@ -1,0 +1,93 @@
+---
+title: Главная
+barbaNameSpace: homepage
+breadCrumbsItems: ['Главная']
+---
+{% extends "layouts/_layout.html" %}
+
+
+{% block header %}
+x
+{% endblock %}
+{% block content %}
+	<div id="fullpage">
+	  <div class="section one">
+		<div class="slide__block"><div class="slide__block-wrap">
+			<div class="slide__block-row">
+				<div class="slide__col-one">
+					<figure class="hero_slogan">
+						{{mixins.icon('logo__full')}}
+					</figure>
+					<p class="lead">
+						cистема Plussell — облачная система автоматизации и стандартизации снабжения предприятий и управления взаимоотношениями с поставщиками.
+					</p>
+			        <div class="hero-buttons">
+			            <a href="#" class="btn btn_icon"><span>Узнать больше</span><i class="zmdi zmdi-arrow-right icon"></i></a>
+			        </div>
+				</div>
+				<div class="slide__col-two">
+					<img src="/img/slide1.png" />
+				</div>
+			</div>
+		</div></div>
+	  </div>
+	  <div class="section two ">
+		<div class="slide__block"><div class="slide__block-wrap">
+			<!-- <img src="/img/slide2.png" class="contSlide" /> -->
+			<div class="benefits">
+				<ul class="benefits__list">
+					<li class="benefits__item icon01">
+						Автоматизация и стандартизация <br/>бизнес-процессов
+					</li>
+					<li class="benefits__item icon02">
+						Абсолютная прозрачность и контроль затрат в режиме реального времени
+					</li>
+					<li class="benefits__item icon03">
+						Сокращение трудозатрат сотрудников. <br/> Фокус на основные обязанности по увеличению эффективности снабжения
+					</li>
+					<li class="benefits__item icon04">
+						Автоматизация и стандартизация <br/>бизнес-процессов
+					</li>
+				</ul>
+			</div>
+		</div></div>
+	  </div>
+	  <div class="section three">
+		<div class="slide__block"><div class="slide__block-wrap">
+			<div class="benefits">
+				<ul class="benefits__list">
+					<li class="benefits__item icon05">
+						Простая и эффективная форма взаимодействия и сотрудничества с поставщиками
+					</li>
+					<li class="benefits__item icon06">
+						Экономия в получении более выгодных предложений за счет специальных инструментов поиска и выбора поставщиков
+					</li>
+					<li class="benefits__item icon07">
+						Прозрачный и оперативный контроль исполнения поставок и качества продукции
+					</li>
+				</ul>
+			</div>
+		</div></div>
+	  </div>
+	  <div class="section four">
+		<div class="slide__block"><div class="slide__block-wrap">
+	 	  	<h1 class="slideTitle">
+		  		Оцифруйте  <br/>
+				ваши закупки и <br/>
+				перейдите <br/>
+				к новому уровню <br/>
+				снабжения предприятия <br/>
+		  	</h1>
+	        <div class="hero-buttons">
+				<a href="05_reg.html" class="btn btn_icon">зарегистрироваться <i class="zmdi zmdi-arrow-right icon"></i></a>
+	        </div>
+		</div></div>
+
+
+	  </div>
+
+	</div>
+
+
+{% endblock %}
+
