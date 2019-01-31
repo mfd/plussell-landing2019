@@ -1,7 +1,17 @@
-ProjectTitle: ps landing
+ProjectTitle: ps_landing
 
 PageList:
 - file: 01_home.html
-  ready: 10
-- file: 02_item.html
-  ready: 80
+  ready: 100
+- file: 02_4customer.html
+  ready: 100
+- file: 03_4suppliers.html
+  ready: 100
+- file: 04_tariffs.html
+  ready: 100
+- file: 05_reg.html
+  ready: 100
+- file: 06_contacts.html
+  ready: 100
+- file: 08_legal.html
+  ready: 100
