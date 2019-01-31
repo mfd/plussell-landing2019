@@ -81,6 +81,14 @@ class BarbaPageBase {
 
     this.menu = new Menu();
 
+        AUI().ready('liferay-sign-in-modal',function(A) {
+          var signIn = A.one('#sign-in');
+          if (signIn && signIn.getData('redirect') !== 'true') {
+            signIn.plug(Liferay.SignInModal);
+          }
+        });
+
+
 
     if($('.tabs').length) this.tabs = new Tabs(this.view);
 

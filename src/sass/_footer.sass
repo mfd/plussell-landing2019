@@ -1,18 +1,20 @@
 $icon: 1.25em
-footer
+.c-footer
     background: #e0e0e0
-footer
-    nav
+.c-footer
+    .c-navi
         a
             color: #333
-footer
+            &:hover
+                color: #ec98ff
+.c-footer
     .container
         display: flex
         flex-direction: row
         align-items: center
-        align-content: center
-        justify-content: center
+        //justify-content: center
         min-height: 150px
+        max-width: 1240px
         +sm
             flex-direction: column
             min-height: initial
@@ -20,14 +22,15 @@ footer
             //flex-grow: 1
         .logo
             width: 150px
-            margin-left: 0
+            margin: 0 1em
+            //margin-left: 0
             +md
                 width: 80px
             +sm
                 margin: 0
         .menubar
             //max-width: 400px
-            nav
+            .c-navi
                 margin: 1em 0
         p
             font-size: .7rem
@@ -36,10 +39,11 @@ footer
                 margin-right: 2em
         .slogan
             flex: 0 0 250px
-            padding-left: 2em
+            padding: 0 1em
+            margin-left: auto
             +sm
                 display: none
-footer
+.c-footer
     .icon-logo__full
         width: 150px
         height: 60px

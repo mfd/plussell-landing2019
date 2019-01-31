@@ -38,59 +38,31 @@
     overflow: hidden
     +clr
 
-
-header
-    position: relative
-    min-height: 80px
+.c-header
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    height: 80px
     min-width: 320px
     padding: 10px 0
-
-    //background: rgba(242, 242, 242, .85)
-    //background: rgba(255, 255, 255, .85)
-    z-index: 1
+    z-index: 100
     box-shadow: none
     margin-bottom: 0em
-
     +sm
-        padding: 0
-        //padding-right: 40px
         width: 100%
-        height: 80px
-        min-height: 80px
+        padding: 0
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25)
-        position: fixed
 
         display: flex
         align-items: center
 
         z-index: 900
         //top: -1px
-        background: rgba(0,0,0,.6)
+        background: rgba(0, 0, 0, 0.6)
         overflow: hidden
-    // .body--gray &
-    //     background: rgba(218, 219, 223, .85)
-    //     transition: background 1s ease
-    // .body--smoke &
-    //     background: rgba(242, 242, 242, .85)
-    //     transition: background 1s ease
-    // .body--white &
-    //     background: rgba(255, 255, 255, .85)
-    //     transition: background 1s ease
 
-main
-    float: right
-    width: calc(100% - 285px)
-    min-height: 400px
-    padding: 0!important
-    margin: 0!important
-    +sm
-        float: none
-        width: 100%
-        padding: 1em
-        //padding-top: 110px
-        min-height: initial
-
-footer
+.с-footer
     padding: 20px 0
     overflow: hidden
     //margin-top: 100px
@@ -119,47 +91,30 @@ footer
 .container
     padding-top: 80px
     @media only screen and (max-height: 850px)
-        padding-top: 80px
+        //padding-top: 80px
 
-    header &
+    .c-header &
         padding: 0 20px
         overflow: initial
         +sm
             padding: 0 10px 0 0
-    footer &
+    .c-footer &
         padding-top: 0px
-header, aside
-    z-index: 500
 
-header
-    position: fixed
-    top: 0
-    left: 0
-    right: 0
-    z-index: 100
-// aside
-//     position: fixed
-//     top: 100px
-//     left: 30px
-//     z-index: 100
-
-// main
-//     margin-top: 100px
-//     +sm
-//         margin-top: 40px
-//         padding-top: 0
-
-
-.itemPage,
-.pageBlog,
-.pageStoreMap,
-.pageShopcart,
-.pageRegLogRec,
-.pageOrdernow
+.itemPage
     float: left
     width: 100%
+    min-height: 400px
+    padding: 0!important
+    margin: 0!important
     +sm
+        float: none
+        width: 100%
+        padding: 1em
+        min-height: initial
         margin-top: 80px!important
+
+.itemPage
     .page__title
         background: transparent
         margin: 0
@@ -179,5 +134,9 @@ header
             min-height: initial
 
 
-
+.liferayAdmin
+    .barba-container
+        margin-top: 65px
+    .c-header
+        top: 65px
 

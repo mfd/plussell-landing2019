@@ -1,31 +1,30 @@
-header .container
-    display: flex
-    flex-direction: row
-    align-items: center
-    width: 100%
-    +md
-        width: 95%
-    +sm
-        width: 100%
-
-.page-homepage
-    header .container
-        padding-top: 3%
-        width: 85%
+.c-header
+    .container
+        display: flex
+        flex-direction: row
+        align-items: center
+        max-width: 1240px
         +md
-            padding-top: 4%
-            width: 90%
+            width: 95%
         +sm
-            padding: 0
+            width: 100%
+
+        .page-homepage &
+            padding-top: 3%
+            width: 85%
+            +md
+                padding-top: 4%
+                width: 90%
+            +sm
+                padding: 0
+
 .page-oneitem
-    header
+    .c-header
         background: rgba(0, 0, 0, 0.6)
         display: flex
         justify-content: center
-    header .container
-        //padding: 1em 2em
 
-header
+.c-header
     font-size: 16px
     color: #949494
     .logo
@@ -42,8 +41,6 @@ header
             background: url('../img/logo__small.svg') no-repeat 50% 50%
             background-size: contain
             display: block
-
-header
     .logo
         width: 80px
         flex: 0 0 80px
@@ -52,7 +49,7 @@ header
 
 
 //header, footer
-nav
+.c-navi
     display: flex
     flex-direction: row
     align-items: center
@@ -60,23 +57,23 @@ nav
     flex-grow: 1
     +fs(9)
     font-weight: 900
-nav *
-nav a
-    color: #fff
-    &:hover,
-    &.is-active
-        color: #ec98ff;
+    a
+        color: #fff
+        &:hover,
+        &.is-active
+            color: #ec98ff
+            text-decoration: none
 
-header, footer
+.c-header, .c-footer
     .logo
-        margin-top: .5em;
+        margin-top: .5em
         @media only screen and (max-width: 1250px)
             margin-left: .5em
             margin-right: 1em
         // +sm
         //     margin-left: 1em
         //     margin-right: 3em
-    nav *
+    .c-navi *
         margin-right: 3em
         +md
             margin-right: 2em
@@ -86,50 +83,31 @@ header, footer
             margin-right: 1em
 
 
-header
+.c-header
     .buttons
         // width: 230px
         // flex: 0 0 230px
         display: flex
         flex-direction: row
-        margin-left: auto;
+        margin-left: auto
     .buttons > .btn
         margin-right: 10px
-    .btn
+    .buttons .btn
         .zmdi
             margin-right: 5px
-        +md
+        @media only screen and (max-width: 1100px)
             > span
                 display: none
-        +md
             > .zmdi
                 line-height: 38px
                 height: 38px
                 font-size: 20px
+        .menu__burger
+            color: #fff
+            //margin-left: 1em
+            &.is-active
 
-+rmin(1100)
-    .logo
-        margin-right: 1em
-        margin-left: 1em
-
-
-
-// body.isLoginform
-//     +pseudo
-//     &:after
-//         background: rgba(255, 255, 255, 0.8)
-//         right: 0;
-//         bottom: 0;
-//         z-index: 800;
-//         opacity: 1;
-//         transition: opacity .4s
-
-.menu__burger
-    color: #fff
-    //margin-left: 1em
-    &.is-active
-
-nav.menu-mobile
+.c-navi.menu-mobile
     transform: translate(0, -800px)
     position: fixed
     left: 0
@@ -140,14 +118,12 @@ nav.menu-mobile
     transition: height 0.5s cubic-bezier(0.15, 0.99, 0.18, 1.01)
     z-index: 999
     overflow: hidden
-
     .is-menu-open &
         transform: translate(0, 0)
         overflow-y:scroll
         height: 100%
         left: 0
         bottom: 0
-nav.menu-mobile
     .menuWrap
         height: 100%
         width: 100%
@@ -161,8 +137,6 @@ nav.menu-mobile
             margin: 0
             margin-bottom: 2em
             font-size: 24px
-    a.is-active
-        //color: #fff
     +pseudo
     &:after
         +coverdiv
@@ -170,11 +144,12 @@ nav.menu-mobile
         z-index: -1
 
 
-header nav.menu
+.c-header nav.c-navi
     display: block
     +sm
         display: none
-header nav.menu-mobile
+
+.c-header nav.c-navi.menu-mobile
     display: none
     +sm
         display: block
@@ -183,9 +158,6 @@ header nav.menu-mobile
     +sm
         display: flex
         align-items: center
-
-
-
 
 .hamburger .hamburger-inner,
 .hamburger .hamburger-inner:after,

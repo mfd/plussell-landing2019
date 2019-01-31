@@ -11,27 +11,9 @@ class Header {
 
     let $body = this.$body;
     console.log('init Header');
-    //$('body').on('click', '.js-sign, .b-login-form--close', this.showLogin.bind(this));
-    $('body').on('click', '.location--change, .location__choose-close', this.showLocation.bind(this));
-    //$body.on('click', this.hidePanels.bind(this));
-
-    const dropdowns = document.querySelectorAll('header .js-dropdown');
-    this.dropdowns = [];
-    for (let i = 0; i < dropdowns.length; i++) {
-      let $el = dropdowns[i];
-      this.dropdowns[i] = new Dropdown('dropdown-' + i, $el);
-    }
 
 
-    $('.location--change label.radio').on('click', function(e) {
-      e.stopPropagation();
-    });
 
-    // $('.location__choose-close').on('click', (event) => {
-    //   event.preventDefault();
-    //   $body.removeClass('isLocationSwitch');
-    // });
-    this.initAnimations();
   }
 
   hidePanels(event) {

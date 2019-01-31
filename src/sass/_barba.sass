@@ -61,14 +61,17 @@ $easingBounce: cubic-bezier(.6,.01,0,1.38)
         &::after
             background-image: url(../img/logo__full.svg)
             background-size: cover
-            width: 350px
-            height: 100px
             position: absolute
             left: 50%
             top: 20%
             display: block
             transform: translate(-50%, -50%)
             opacity: .5
+            width: 320px
+            height: 100px
+            +sm
+                width: 250px
+                height: 78px
     .shapeTransit2
         background: #f5f0ec
         z-index: 21000
@@ -91,25 +94,33 @@ $easingBounce: cubic-bezier(.6,.01,0,1.38)
             top: 50%
             display: block
             transform: translate(-50%, -50%)
-            width: 250px
-            height: 78px
             +pseudo
             &::before
             &::after
                 background-image: url(../img/logo__full.svg)
                 background-size: cover
-                width: 330px
-                height: 100px
                 animation: pulse 0.9s alternate infinite
-                +sm
-                    width: 250px
-                    height: 78px
                 @keyframes pulse
                   from
                     transform: scale(1.1)
                   to
                     transform: scale(0.8)
                     opacity: 0.5
+        .loader__wrap
+            width: 320px
+            height: 100px
+            +sm
+                width: 250px
+                height: 78px
+            &::before
+            &::after
+                width: 320px
+                height: 100px
+                +sm
+                    width: 250px
+                    height: 78px
+
+
 .js body
     overflow: hidden
     &.is-loaded
@@ -192,7 +203,7 @@ $easingBounce: cubic-bezier(.6,.01,0,1.38)
 
 
 
-header
+.header
     transition: transform $speed-slower $easing, background-color $speed-slower $easing
     html:not(.has-dom-loaded) &
         transform: translate3d(0, -100%, 0)

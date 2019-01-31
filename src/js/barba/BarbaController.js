@@ -25,6 +25,11 @@ class BarbaController {
     Barba.Pjax.getTransition = BarbaController.getTransition;
     Barba.Pjax.cacheEnabled = false;
     Barba.Pjax.start();
+
+    if ($('body').hasClass('liferayAdmin')) {
+      console.log('LIFERAY ADMIN! Barba ❌');
+      Barba.Pjax.preventCheck = () => false;
+    }
   }
 
   static getTransition() {

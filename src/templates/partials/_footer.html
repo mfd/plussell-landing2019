@@ -1,8 +1,6 @@
-{% import "data/footer.html" as tests %}
-
 {% macro footer__block(phone) %}
 <!-- footer {% if(footerWide) %}footer__wide{% endif %} -->
-<footer class="footer {% if(footerWide) %}footer__wide{% endif %}">
+<footer class="c-footer {% if(footerWide) %}footer__wide{% endif %}">
     <div class="container">
         <div class="logo">
             {{mixins.icon('logo__full')}}
@@ -12,7 +10,6 @@
             {{mixins.menubar(title)}}
             <p class="subNav">
                 <a href="06_contacts.html">Контактная информация</a>
-                <a href="#">Использование информации</a>
                 <a href="08_legal.html">Пользовательское соглашение</a>
             </p>
             <p>© 2015-2019, ООО «АБР групп»</p>
@@ -20,9 +17,6 @@
         <div class="slogan">
             {{mixins.icon('logo__slogan')}}
         </div>
-
-
-
     </div>
 </footer>
 

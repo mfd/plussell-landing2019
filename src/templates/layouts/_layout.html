@@ -22,7 +22,7 @@
       <div id="barba-wrapper">
         <div class="barba-container homeContainer" data-namespace="{% if barbaNameSpace %}{{ barbaNameSpace }}{% else %}page{% endif %}" data-title="{{ title }}">
           <div class="{% if barbaNameSpace==='homepage'%}{% else %}container{% endif %}">
-          {% include "partials/_header.html" %}
+            {% include "partials/_header.html" %}
             <!-- BEGIN content -->
             {% block content %}
 

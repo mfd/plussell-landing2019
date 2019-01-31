@@ -21,7 +21,7 @@
         { 'href': '03_4suppliers.html', title:'Поставщикам'},
         { 'href': '04_tariffs.html', title:'Тарифы'}
     ] %}
-    <nav class="{{class}}">
+    <nav class="c-navi {{class}}">
       <div class="menuWrap">
         {% for item in items %}
               <a href="{{ item.href }}" class="{% if title == item.title %}is-active{% endif %}">{{ item.title }}</a>
