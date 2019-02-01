@@ -80,13 +80,14 @@ class BarbaPageBase {
     // Custom code should be added before super.
 
     this.menu = new Menu();
-
-        AUI().ready('liferay-sign-in-modal',function(A) {
-          var signIn = A.one('#sign-in');
-          if (signIn && signIn.getData('redirect') !== 'true') {
-            signIn.plug(Liferay.SignInModal);
-          }
-        });
+    if(window.AUI){
+      AUI().ready('liferay-sign-in-modal',function(A) {
+        var signIn = A.one('#sign-in');
+        if (signIn && signIn.getData('redirect') !== 'true') {
+          signIn.plug(Liferay.SignInModal);
+        }
+      });
+    }
 
 
 

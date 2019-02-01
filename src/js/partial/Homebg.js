@@ -25,7 +25,11 @@ export default class HomeBG {
 
     this.myFullpage = new fullpage('#fullpage', {
       licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
-      scrollOverflow: true,
+      //scrollOverflow: true,
+      anchors: ['firstPage', 'secondSlide', 'thirdSlide', 'finishSlide'],
+      navigation: true,
+      navigationPosition: 'right',
+      //navigationTooltips: ['', '', '', ''],
       onLeave: function(section, origin, destination, direction) {
         if (origin.index === 0) {
           $('body').addClass(colors[0]);

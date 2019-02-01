@@ -17,10 +17,10 @@
             margin: 0
             +pseudo
             &:after
-                top: -10px;
-                left: -10px;
-                bottom: -10px;
-                right: -10px;
+                top: -10px
+                left: -10px
+                bottom: -10px
+                right: -10px
                 background: #7751b0
                 z-index: -1
                 transform: skew(-12deg)
@@ -44,16 +44,18 @@
     padding: 20px 40px!important
     margin: 1em -3em
     position: relative
+    +sm
+        margin: 1em -2em
 .tabs-modules
     .tabs__caption
         text-align: center
         z-index: 10
         &:after
-            background: #C4C4C4;
+            background: #C4C4C4
             opacity: 0
         &-item
             font-size: 18px
-            line-height: 36px
+            line-height: 26px
             font-weight: 900
             text-align: center
             text-transform: uppercase
@@ -94,7 +96,7 @@
     .tabs__caption
         position: absolute
         left: 5%
-        overflow: hidden;
+        overflow: hidden
         &:after
             opacity: 1
     .module
@@ -132,6 +134,12 @@
             flex-direction: row
     .tabs__caption-item
         display: block
+        margin: 0 2em
+        white-space: normal
+        +sm
+            white-space: nowrap
+            margin: 0
+            margin-right: 1em
         &:after
             display: none
             opacity: 0
