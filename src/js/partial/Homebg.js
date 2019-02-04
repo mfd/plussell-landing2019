@@ -26,7 +26,7 @@ export default class HomeBG {
     this.myFullpage = new fullpage('#fullpage', {
       licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
       //scrollOverflow: true,
-      anchors: ['firstPage', 'secondSlide', 'thirdSlide', 'finishSlide'],
+      anchors: ['firstSlide', 'secondSlide', 'thirdSlide', 'finishSlide'],
       navigation: true,
       navigationPosition: 'right',
       //navigationTooltips: ['', '', '', ''],

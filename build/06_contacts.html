@@ -50,14 +50,141 @@
             <div class="page__title">
               <span class="page__title-text"> Контакты </span>
             </div>
-            <div class="page__content">
+            <div class="page__content pageContacts">
+              <script type="text/javascript">
+                //https://snazzymaps.com/style/15/subtle-grayscale
+                var ContactMap = [];
+                ContactMap.opt = {
+                  API_KEY: 'AIzaSyC30nnqC_nxh8v5p4jQpZEE2KyZUhl2NLU',
+                  mapStyle: [
+                  {
+                    "featureType": "administrative",
+                    "elementType": "all",
+                    "stylers": [
+                    {
+                      "saturation": "-100"
+                    }]
+                  },
+                  {
+                    "featureType": "administrative.province",
+                    "elementType": "all",
+                    "stylers": [
+                    {
+                      "visibility": "off"
+                    }]
+                  },
+                  {
+                    "featureType": "landscape",
+                    "elementType": "all",
+                    "stylers": [
+                    {
+                      "saturation": -100
+                    },
+                    {
+                      "lightness": 65
+                    },
+                    {
+                      "visibility": "on"
+                    }]
+                  },
+                  {
+                    "featureType": "poi",
+                    "elementType": "all",
+                    "stylers": [
+                    {
+                      "saturation": -100
+                    },
+                    {
+                      "lightness": "50"
+                    },
+                    {
+                      "visibility": "simplified"
+                    }]
+                  },
+                  {
+                    "featureType": "road",
+                    "elementType": "all",
+                    "stylers": [
+                    {
+                      "saturation": "-100"
+                    }]
+                  },
+                  {
+                    "featureType": "road.highway",
+                    "elementType": "all",
+                    "stylers": [
+                    {
+                      "visibility": "simplified"
+                    }]
+                  },
+                  {
+                    "featureType": "road.arterial",
+                    "elementType": "all",
+                    "stylers": [
+                    {
+                      "lightness": "30"
+                    }]
+                  },
+                  {
+                    "featureType": "road.local",
+                    "elementType": "all",
+                    "stylers": [
+                    {
+                      "lightness": "40"
+                    }]
+                  },
+                  {
+                    "featureType": "transit",
+                    "elementType": "all",
+                    "stylers": [
+                    {
+                      "saturation": -100
+                    },
+                    {
+                      "visibility": "simplified"
+                    }]
+                  },
+                  {
+                    "featureType": "water",
+                    "elementType": "geometry",
+                    "stylers": [
+                    {
+                      "hue": "#ffff00"
+                    },
+                    {
+                      "lightness": -25
+                    },
+                    {
+                      "saturation": -97
+                    }]
+                  },
+                  {
+                    "featureType": "water",
+                    "elementType": "labels",
+                    "stylers": [
+                    {
+                      "lightness": -25
+                    },
+                    {
+                      "saturation": -100
+                    }]
+                  }],
+                  mapMarkerUrl: '/img/marker.svg'
+                };
+
+              </script>
               <div class="row">
-              </div>
-              <div class="row">
-              </div>
-              <div class="row">
-              </div>
-              <div class="row">
+                <div class="map__content">
+                  <p> 620100, Свердловская обл., <br> Екатеринбург, ул. Ткачей, 25, офис А518 </p>
+                  <p>
+                    <a href="mailto:info@plussell.org">info@plussell.org</a>
+                  </p>
+                  <!--
+					<p><a href="https://www.google.com/maps/place/Екатеринбург, ул. Ткачей, 25">Схема проезда</a></p>
+					-->
+                </div>
+                <div class="map__container" id="map">
+                </div>
               </div>
             </div>
           </main>

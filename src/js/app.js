@@ -29,13 +29,12 @@ import BarbaController from './barba/BarbaController';
 
 import Header from './partial/Header';
 //import Menu from './partial/Menu';
-import owlCarousel from './partial/owlCarousel';
+
 //Pages
 
 import Home from './template/Home';
 import Page from './template/Page';
 import OneItem from './template/OneItem';
-import Stores from './template/Stores';
 
 class Main {
 
@@ -59,7 +58,6 @@ class Main {
     this.home = new Home();
     this.page = new Page();
     this.oneitem = new OneItem();
-    this.stores = new Stores();
 
     this.header = new Header();
     //this.menu = new Menu();
@@ -67,7 +65,6 @@ class Main {
     BarbaController.register(this.home);
     BarbaController.register(this.page);
     BarbaController.register(this.oneitem);
-    BarbaController.register(this.stores);
 
     //onPageReady
     Barba.Dispatcher.on('newPageReady', function(currentStatus, oldStatus, container) {

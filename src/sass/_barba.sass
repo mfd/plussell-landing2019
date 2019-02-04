@@ -203,10 +203,10 @@ $easingBounce: cubic-bezier(.6,.01,0,1.38)
 
 
 
-.header
+.c-header
     transition: transform $speed-slower $easing, background-color $speed-slower $easing
     html:not(.has-dom-loaded) &
-        transform: translate3d(0, -100%, 0)
+        transform: translate3d(0, -150%, 0)
 
 
 #fullpage .section .slide__block
@@ -265,3 +265,10 @@ $easingBounce: cubic-bezier(.6,.01,0,1.38)
     transition: transform $speed-medium $easing, background-color $speed-medium $easing
     html:not(.has-dom-loaded) &
         transform: translate3d(0, 100%, 0)
+
+.c-footer
+    opacity: 1
+    transition: transform $speed-slower $easing, opacity $speed-slowest $easing
+    html:not(.has-dom-loaded) &
+        opacity: 0
+        transform: translate3d(0, 200%, 0)

@@ -1,6 +1,8 @@
 $icon: 1.25em
 .c-footer
     background: #e0e0e0
+    +sm
+    padding: 1em
 .c-footer
     .c-navi
         a
@@ -25,7 +27,8 @@ $icon: 1.25em
             margin: 0 1em
             //margin-left: 0
             +md
-                width: 80px
+                width: 150px
+                height: 60px
             +sm
                 margin: 0
         .menubar
@@ -34,6 +37,7 @@ $icon: 1.25em
                 margin: 1em 0
         p
             font-size: .7rem
+            display: flex;
             a
                 text-decoration: underline
                 margin-right: 2em
@@ -49,14 +53,14 @@ $icon: 1.25em
         height: 60px
         fill: #405170
         +md
-            display: none
+            //display: none
     .icon-logo__small
         width: 80px
         height: 50px
         fill: #405170
         display: none
         +md
-            display: block
+            //display: block
     .icon-logo__slogan
         width: 100%
         height: auto

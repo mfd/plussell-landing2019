@@ -4,10 +4,13 @@ import Tools from '../tools/Tools';
 import Menu from '../partial/Menu';
 import Tabs from '../partial/Tabs';
 import FakeSelect from '../partial/fakeSelect';
+import LiferayUI from '../partial/liferay';
 
 import Dropdown from '../partial/Dropdown';
 
 import Popup from '../partial/Popup';
+import Map from '../partial/ContactMap';
+
 //import Header from '../partial/Header';
 //import owlCarousel from '../partial/owlCarousel';
 
@@ -80,18 +83,17 @@ class BarbaPageBase {
     // Custom code should be added before super.
 
     this.menu = new Menu();
-    if(window.AUI){
-      AUI().ready('liferay-sign-in-modal',function(A) {
-        var signIn = A.one('#sign-in');
-        if (signIn && signIn.getData('redirect') !== 'true') {
-          signIn.plug(Liferay.SignInModal);
-        }
-      });
+
+    if(window.AUI && Liferay) {
+      this.liferayUI = new LiferayUI();
     }
 
 
 
     if($('.tabs').length) this.tabs = new Tabs(this.view);
+    if($('#map').length) {
+      this.contactMap = new Map(this.view);
+    }
 
     // FAKE SELECT
     if($('[data-fake-select]').length) {
@@ -133,7 +135,7 @@ class BarbaPageBase {
 	 * A new Transition toward a new page has just started.
 	 */
   onLeave() {
-    //console.log('leave',this.id);
+    console.log('leave',this.id);
     //ResizeManager.unbind( this.id );
 
     if(this.menu) this.menu.destroy();
@@ -161,9 +163,12 @@ class BarbaPageBase {
       this.dropdowns = null;
     }
 
+    if(this.liferayUI) {
+      this.liferayUI.destroy();
+    }
 
-    // if(this.popup) this.popup.destroy();
-    // if(this.header) this.header.destroy();
+
+
   }
 
   /**
