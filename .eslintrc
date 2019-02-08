@@ -28,5 +28,13 @@
     "space-before-function-paren": [2, "never"],
     "constructor-super": 2,
     "arrow-spacing": 2
+  },
+  "globals": {
+    "document": true,
+    "foo": true,
+    "window": true,
+    "$": true,
+    "tippy": true,
+    "jquery": true
   }
 }

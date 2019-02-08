@@ -31,11 +31,7 @@
           </div>
           <!-- BEGIN footer -->
           {% block footer %}
-    {% if barbaNameSpace==='homepage'%}
-
-    {% else %}
-          {% include "partials/_footer.html" %}
-    {% endif %}
+            {% include "partials/_footer.html" %}
           {% endblock %}
           <!-- END footer -->
         {{mixins.menubar(title, 'menu-mobile')}}

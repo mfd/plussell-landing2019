@@ -90,7 +90,9 @@ class BarbaPageBase {
 
 
 
-    if($('.tabs').length) this.tabs = new Tabs(this.view);
+    if($('.tabs').length) {
+      this.tabs = new Tabs(this.view);
+    }
     if($('#map').length) {
       this.contactMap = new Map(this.view);
     }
@@ -147,6 +149,9 @@ class BarbaPageBase {
     if(this.tabs) this.tabs.destroy();
     if(this.basket) this.basket.destroy();
 
+    if(this.contactMap) {
+      this.contactMap.destroy();
+    }
 
     //fakeselect
     if (this.fakeselect) {

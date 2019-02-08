@@ -1,8 +1,9 @@
 $darken: 7%
-$gray: #ccc;
-$accent: #F6C859;
-$accent-blue: blue;
-$default: transparent;
+$gray: #ccc
+$accent: #F6C859
+$accent-blue: blue
+$default: transparent
+
 .btn
     display: inline-block
     color: #333
@@ -39,8 +40,8 @@ $default: transparent;
     +xs
         width: auto
         display: block
-    &:hover
-        color: #333;
+    &:hover, &:focus, &:active
+        color: #333
         background: rgba($accent, 0.9)
         .icon
             transform: translateX(3px)
@@ -86,9 +87,9 @@ $default: transparent;
     background: $default
     color: #fff
     border: 2px solid #fff
-    &:hover
+    &:hover, &:focus
         color: #333
-        background: #f5f5f5;
+        background: #f5f5f5
 // .button_full
 //  width: 100%
 //  display: block
@@ -108,7 +109,7 @@ $default: transparent;
 .btn_blue
     background: $accent_blue
     border-color: $accent_blue
-    &:hover
+    &:hover, &:focus, &:active
         background: rgba($accent_blue, 0.9)
 .btn_white
     background: #fff

@@ -17,7 +17,7 @@ import 'babel-polyfill';
 //import 'fullpage.js/dist/jquery.fullPage';
 //import PerfectScrollbar from 'perfect-scrollbar';
 
-import FixBody from 'js-util/FixBody';
+// import FixBody from './tools/FixBody';
 
 import DeviceInfo from './tools/DeviceInfo';
 //import ResizeManager from './managers/ResizeManager';

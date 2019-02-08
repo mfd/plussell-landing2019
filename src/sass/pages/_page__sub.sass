@@ -63,15 +63,20 @@
     .module
         display: flex
         flex-direction: row-reverse
+        +sm
+            flex-direction: column
     .module
         &__pic
             //width: 65%
             flex: 0 0 60%
             height: auto
             margin: 0 3%
+            margin-bottom: 1em
             max-width: 900px
             +md
                 flex: 0 0 40%
+            +sm
+                flex: 0 0 0
         &__pic
             +pseudo
             &:after
@@ -120,7 +125,7 @@
             +md
                 font-size: 14px
             +sm
-                font-size: 12px
+                font-size: 12px!important
                 line-height: 1
 
 .tabs-modules.tabs-modules--tools
@@ -157,4 +162,4 @@
             font-size: 20px
     .module__pic
         +sm
-            flex: 0 0 100%
+            //flex: 0 0 0

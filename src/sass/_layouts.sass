@@ -4,11 +4,14 @@
     padding: 0 0px
     position: relative
     overflow: hidden
+
     +sm
         padding: 0 0
     &__in
         max-width: 580px
         margin: 0 auto
+    .page-oneitem &
+        width: 100%!important
 
 .wrapper
     padding: 0 50px
@@ -132,6 +135,30 @@
         +sm
             padding: 1em 2em
             min-height: initial
+
+.barba-container
+    // background: url('../img/home_bg.png')
+    // background-size: cover
+
+.barba-container
+    +pseudo
+    &:before
+        +coverdiv
+        //background: linear-gradient(135deg, #E21B4B 0.66%, #7ECDE7 99.34%)
+        background: linear-gradient(102.49deg, #484E6E 11.87%, #B32B56 90.23%)
+        z-index: -1
+    &:after
+        +coverdiv
+        background: url('../img/slide_bg.png')
+        background-size: contain
+        opacity: .2
+        z-index: -1
+        +xs
+            background: none
+        .page-homepage &
+            //background-size: cover
+
+
 
 
 .liferayAdmin
