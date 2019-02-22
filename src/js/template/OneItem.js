@@ -1,5 +1,5 @@
 import BarbaPageBase from '../barba/BarbaPageBase';
-import PerfectScrollbar from 'perfect-scrollbar';
+//import PerfectScrollbar from 'perfect-scrollbar';
 import 'magnific-popup';
 
 export default class OneItem extends BarbaPageBase {
@@ -24,8 +24,33 @@ export default class OneItem extends BarbaPageBase {
     this.gallery = $(this.view).find('.oneitem__gallery-carousel');
     //this.itemGallery();
     //this.initModal();
+    this.initLightbox();
   }
-
+  initLightbox() {
+    console.log($('.module__pic-full').length);
+    $('.module__pic-full').magnificPopup({
+      type: 'image',
+      callbacks: {
+        beforeOpen: function() {
+          // just a hack that adds mfp-anim class to markup
+          //debugger;
+          this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
+          //this.st.mainClass = this.st.el.attr('data-effect');
+          //this.st.mainClass = 'mfp-zoom-out';
+        }
+      },
+      tLoading: 'Загрузка #%curr%...',
+      //mainClass: 'mfp-img-mobile',
+      image: {
+        tError: '<a href="%url%">Изображение #%curr%</a> не может быть загружено',
+        titleSrc: function(item) {
+          //return item.el.attr('title') + '<small></small>';
+          return $('.oneitem__title').html();
+        }
+      },
+      verticalFit: true
+    });
+  }
   initModal() {
     $(this.view).find('a.popuplink').magnificPopup({
       type: 'ajax',

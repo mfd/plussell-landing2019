@@ -63,6 +63,7 @@
     .module
         display: flex
         flex-direction: row-reverse
+        align-items: flex-start
         +sm
             flex-direction: column
     .module
@@ -77,6 +78,7 @@
                 flex: 0 0 40%
             +sm
                 flex: 0 0 0
+                min-height: initial
         &__pic
             +pseudo
             &:after
@@ -97,6 +99,30 @@
                     margin: 0
         &__desc
             margin: 0 2%
+        &__pic-full
+            position: absolute
+            left: 0
+            right: 0
+            top: 0
+            bottom: 0
+            display: flex
+            align-items: center
+            justify-content: center
+            background: rgba(51, 51, 51, 0.2)
+            border-radius: 10px
+            font-size: 48px
+            z-index: 10
+            opacity: 0
+            &:hover
+                opacity: 1
+                text-decoration: none
+                +xs
+                    opacity: 0
+    .module_pic
+        &:hover
+            &-full
+                opacity: 1
+
 
 .tabs-modules
     .tabs__caption

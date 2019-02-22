@@ -3,8 +3,6 @@
  */
 
 class DeviceInfo {
-
-
   static check() {
 
     // devices (need mobile detect)

@@ -32,11 +32,11 @@ class Page extends BarbaPageBase {
 
     this.tips = [];
 
-    this.view.querySelectorAll('[data-tippy]').forEach(el => {
-      this.tips.push(
-        tippy(el)
-      );
-    });
+    // this.view.querySelectorAll('[data-tippy]').forEach(el => {
+    //   this.tips.push(
+    //     tippy(el)
+    //   );
+    // });
 
 
 

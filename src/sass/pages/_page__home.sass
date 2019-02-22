@@ -4,7 +4,7 @@
     .c-header
         .container
             max-width: 1240px
-.desktop.page-homepage
+html:not(.mobile) .page-homepage
     .c-footer
         position: fixed
         bottom: 0
@@ -122,15 +122,23 @@
     .slideTitle
         font: 700 54px/74px 'Oswald',sans-serif
         text-transform: uppercase
-        @media only screen and (max-width: 1250px)
+        // @media (max-width: 1250px) and (max-height: 700px)
+        //     font-size: 40px
+        //     line-height: 60px
+        //@media (max-width: 1250px) and (max-height: 900px)
+        @media screen and (max-width: 995px) , screen and (max-height: 800px)
+            font-size: 34px
+            line-height: 48px
+        @media (max-width: 1250px) and (max-height: 1200px)
             font-size: 40px
             line-height: 60px
-        +md
-            font-size: 44px
-            line-height: 64px
+
+
         +sm
             font-size: 24px
             line-height: 34px
+
+
 .slide__block
     .hero_slogan
         margin-bottom: 1em
@@ -169,12 +177,17 @@
         .btn
             &:hover
                 transform: scale(1.1)
-
+        .section.one &
+            +xs
+                display: none
 #fullpage .section.four .slide__block
     .slideTitle
         +md
             font-size: 34px
             line-height: 42px
+        +sm
+            font-size: 24px
+            line-height: 32px
 
 
 #fullpage
