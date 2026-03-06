@@ -1,5 +1,5 @@
 # plussell.org 2019 Landing
-https://psell.surge.sh
+https://mfd.github.io/plussell-landing2019
 
 ```
 npm install or yarn - install all dependencies
